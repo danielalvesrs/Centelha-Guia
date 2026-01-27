@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Música Personalizada | Centelha Guia</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #1c2e4a, #6847a8);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: #ccc;
+      margin: 0;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .button {
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #8e44ad;
+    }
+
+    .content {
+      flex: 1;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .note-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .note-box h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .note-box p {
+      color: #ddd;
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+
+    .note-box small {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .note-box button {
+      margin-top: 1.5rem;
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .note-box button:hover {
+      background-color: #8e44ad;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.85rem;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<!-- ... HEAD permanece o mesmo ... -->
+
+<body>
+
+  <header>
+    <h1>🎧 Música Personalizada</h1>
+    <p>Sua trilha 8D baseada em nome e nascimento</p>
+  </header>
+
+  <div class="top-bar">
+    <button class="button" onclick="window.location.href='/'">← Voltar</button>
+    <span style="font-size: 0.9rem; color: #eee;">Centelha Guia</span>
+  </div>
+
+  <!-- Início do conteúdo principal -->
+  <div class="content" id="conteudo" style="margin-top: 1rem;">
+    <div class="note-box">
+      <h2>🎧 Essa não é a sua frequência… ainda.</h2>
+      <p>O áudio que você está ouvindo é uma amostra criada com os dados do desenvolvedor do projeto.</p>
+      <p><strong>Cada trilha gerada pela Centelha Guia é única</strong>, moldada pela sua data de nascimento e nome — elementos que definem frequências específicas e efeitos sonoros adaptados ao seu momento energético.</p>
+      <small>Ouvir repetidamente trilhas de outras pessoas pode causar desconexão ou distorcer os efeitos esperados. Para sentir o verdadeiro impacto da sua vibração sonora pessoal, gere sua trilha única.</small><br>
+      <button onclick="window.location.href='https://personal-binaural.web.app'">🔮 Gerar Minha Frequência Pessoal</button>
+    </div>
+  <!-- Seta animada para baixo -->
+  <div style="text-align: center; margin-top: 0.5rem;">
+    <a href="#conteudo" style="text-decoration: none;">
+      <div style="animation: bounce 2s infinite;">
+        <span style="font-size: 2rem;">⬇️</span>
+      </div>
+    </a>
+  </div>
+
+
+    <iframe src="https://personal-binaural.web.app"></iframe>
+  </div>
+
+  <footer>
+    &copy; 2025 Centelha Guia. Todos os direitos reservados.
+  </footer>
+
+  <!-- Animação CSS -->
+  <style>
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-8px);
+      }
+      60% {
+        transform: translateY(-4px);
+      }
+    }
+  </style>
+
+</body>
+</html>
