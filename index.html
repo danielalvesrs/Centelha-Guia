@@ -73,9 +73,41 @@
 
     .spark { color: var(--yellow); }
 
+    .tagline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 13px auto 0;
+      font-size: clamp(.82rem, 3.4vw, 1.02rem);
+      font-weight: 800;
+      letter-spacing: .14em;
+      line-height: 1.4;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--yellow), #ff91cd 48%, #82e6ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 14px rgba(255, 145, 205, .22));
+    }
+
+    .tagline::before,
+    .tagline::after {
+      content: "";
+      width: clamp(22px, 8vw, 54px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 211, 90, .9));
+      box-shadow: 0 0 10px rgba(255, 211, 90, .55);
+    }
+
+    .tagline::after {
+      background: linear-gradient(90deg, rgba(130, 230, 255, .9), transparent);
+      box-shadow: 0 0 10px rgba(130, 230, 255, .55);
+    }
+
     .intro {
       max-width: 530px;
-      margin: 12px auto 0;
+      margin: 11px auto 0;
       color: var(--muted);
       font-size: 1rem;
       line-height: 1.55;
@@ -191,6 +223,7 @@
     <header>
       <img class="brand" src="centelha-guia%20logo.png" alt="Símbolo da Centelha Guia">
       <h1><span class="spark">✦</span> Centelha Guia</h1>
+      <p class="tagline">Unindo espiritualidade com tecnologia</p>
       <p class="intro">Experiências digitais para explorar som, mente e criatividade. Escolha um aplicativo e comece.</p>
     </header>
 
