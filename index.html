@@ -224,6 +224,13 @@
       transition: transform .2s ease, filter .2s ease, border-color .2s ease;
     }
 
+    .app-action svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 7px;
+      flex: 0 0 auto;
+    }
+
     .app-action:hover,
     .app-action:focus-visible {
       transform: translateY(-2px);
@@ -280,8 +287,16 @@
           <p>Crie uma experiência sonora baseada no seu nome e nascimento.</p>
         </span>
         <span class="app-actions">
-          <a class="app-action app-action--android" href="https://play.google.com/store/apps/details?id=app.netlify.personal_binaural.twa" target="_blank" rel="noopener noreferrer" aria-label="Abrir Personal Binaural para Android na Google Play">ANDROID</a>
-          <a class="app-action app-action--hotmart" href="https://hotmart.com/pt-br/marketplace/produtos/personal-binaural/T107148387E" target="_blank" rel="noopener noreferrer" aria-label="Abrir Personal Binaural na Hotmart">HOTMART</a>
+          <a class="app-action app-action--android" href="https://play.google.com/store/apps/details?id=app.netlify.personal_binaural.twa" target="_blank" rel="noopener noreferrer" aria-label="Abrir Personal Binaural na Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#48ffb5" d="M3.5 2.7 14 12 3.5 21.3c-.3-.4-.5-.9-.5-1.5V4.2c0-.6.2-1.1.5-1.5Z"/>
+              <path fill="#58c7ff" d="m3.5 2.7 13.2 7.5L14 12 3.5 2.7Z"/>
+              <path fill="#ffd95a" d="m14 12 2.7 1.8-13.2 7.5L14 12Z"/>
+              <path fill="#ff6b6b" d="m16.7 10.2 3.2 1.8-3.2 1.8L14 12l2.7-1.8Z"/>
+            </svg>
+            Google Play
+          </a>
+          <a class="app-action app-action--hotmart" href="https://hotmart.com/pt-br/marketplace/produtos/personal-binaural/T107148387E" target="_blank" rel="noopener noreferrer" aria-label="Abrir o Web App Personal Binaural pela Hotmart">Web App Hotmart</a>
         </span>
       </article>
 
