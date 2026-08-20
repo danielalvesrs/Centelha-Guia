@@ -197,6 +197,49 @@
 
     .app-card:hover .arrow { transform: translateX(3px); }
 
+    .app-card--split {
+      grid-template-columns: 76px minmax(0, 1fr);
+    }
+
+    .app-actions {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .app-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 14px;
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-decoration: none;
+      transition: transform .2s ease, filter .2s ease, border-color .2s ease;
+    }
+
+    .app-action:hover,
+    .app-action:focus-visible {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+      border-color: rgba(255,255,255,.42);
+      outline: none;
+    }
+
+    .app-action--android {
+      background: linear-gradient(135deg, #187b4a, #24a865);
+    }
+
+    .app-action--hotmart {
+      background: linear-gradient(135deg, #ff6b35, #f04d23);
+    }
+
     footer {
       margin-top: 28px;
       text-align: center;
@@ -211,6 +254,8 @@
       .app-copy h2 { font-size: 1.02rem; }
       .app-copy p { font-size: .82rem; }
       .arrow { width: 31px; height: 31px; }
+      .app-card--split { grid-template-columns: 64px minmax(0, 1fr); }
+      .app-action { min-height: 42px; padding: 9px 10px; font-size: .76rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -228,15 +273,17 @@
     </header>
 
     <section class="apps" aria-label="Aplicativos Centelha Guia">
-      <a class="app-card" href="https://play.google.com/store/apps/details?id=app.netlify.personal_binaural.twa" target="_blank" rel="noopener noreferrer" aria-label="Abrir Música Binaural Personalizada na Google Play">
+      <article class="app-card app-card--split">
         <span class="app-icon binaural" aria-hidden="true">🎧</span>
         <span class="app-copy">
           <h2>Música Binaural Personalizada</h2>
           <p>Crie uma experiência sonora baseada no seu nome e nascimento.</p>
-          <span class="tag">GOOGLE PLAY</span>
         </span>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
+        <span class="app-actions">
+          <a class="app-action app-action--android" href="https://play.google.com/store/apps/details?id=app.netlify.personal_binaural.twa" target="_blank" rel="noopener noreferrer" aria-label="Abrir Personal Binaural para Android na Google Play">ANDROID</a>
+          <a class="app-action app-action--hotmart" href="https://hotmart.com/pt-br/marketplace/produtos/personal-binaural/T107148387E" target="_blank" rel="noopener noreferrer" aria-label="Abrir Personal Binaural na Hotmart">HOTMART</a>
+        </span>
+      </article>
 
       <a class="app-card" href="https://play.google.com/store/apps/details?id=app.netlify.stroopapp.twa" target="_blank" rel="noopener noreferrer" aria-label="Abrir Stroop na Google Play">
         <span class="app-icon stroop"><img src="icon-512x512.png" alt=""></span>
